@@ -17,6 +17,7 @@
     <a href="#theories">Fan Theories</a>
     <a href="#gallery">Art Gallery</a>
     <a href="#quiz">Trivia Quiz</a>
+    <a href="#submit-art">Submit Art</a>
   </nav>
 
   <main>
@@ -27,7 +28,7 @@
 
     <section id="gallery" class="card">
       <h2>🎨 Featured Fan Art</h2>
-      <img src="https://images.unsplash.com/photo-1607083206173-3e3b5b6b9c3b?auto=format&fit=crop&w=800&q=80" alt="Demogorgon Fan Art" style="width:100%; border-radius:8px; margin-bottom:10px;" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Stranger_Things_logo.png/800px-Stranger_Things_logo.png" alt="Stranger Things Logo Art" style="width:100%; border-radius:8px; margin-bottom:10px;" />
       <p>Artist @pixelwitch recreated the Demogorgon in stunning detail. Want your art featured? Submit it to our gallery!</p>
     </section>
 
@@ -54,6 +55,23 @@
         </div>
         <button type="button" onclick="submitQuiz()">Submit Quiz</button>
         <p id="quiz-result"></p>
+      </form>
+    </section>
+
+    <section id="submit-art" class="card">
+      <h2>🖌️ Submit Your Fan Art</h2>
+      <form id="art-form">
+        <label for="artist-name">Your Name:</label><br>
+        <input type="text" id="artist-name" name="artist-name" required><br><br>
+
+        <label for="art-link">Image Link (URL):</label><br>
+        <input type="url" id="art-link" name="art-link" required><br><br>
+
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+        <button type="submit">Submit Art</button>
+        <p id="art-response"></p>
       </form>
     </section>
   </main>
