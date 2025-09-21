@@ -3,48 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fandom Central</title>
+  <title>Stranger Things Fandom Central</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Fandom Central</h1>
-    <p>Your hub for theories, art, and community</p>
+    <h1>Stranger Things Fandom Central</h1>
+    <p>Your hub for theories, art, trivia, and community</p>
   </header>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Fan Theories</a>
-    <a href="#">Art Gallery</a>
-    <a href="#">Trivia</a>
+    <a href="#theories">Fan Theories</a>
+    <a href="#gallery">Art Gallery</a>
+    <a href="#quiz">Trivia Quiz</a>
   </nav>
 
   <main>
-    <section class="card">
-      <h2>Latest Theory</h2>
-      <p>Could the Upside Down be a parallel timeline? Fans weigh in on clues from Season 4.</p>
+    <section id="theories" class="card">
+      <h2>🔥 Fan Theory Spotlight</h2>
+      <p>Is the Upside Down a failed government experiment? Clues from Season 1’s lab scenes suggest a sinister origin beyond alternate dimensions.</p>
     </section>
 
-    <section class="card">
-      <h2>Featured Fan Art</h2>
-      <p>Check out this stunning illustration of Eleven facing off against the Mind Flayer.</p>
+    <section id="gallery" class="card">
+      <h2>🎨 Featured Fan Art</h2>
+      <p>Artist @pixelwitch recreated the Demogorgon using only pixel art — check it out in our gallery!</p>
     </section>
 
-    <section class="card">
-      <h2>Trivia Challenge</h2>
-      <p>Think you know everything about Hawkins? Test your knowledge in our trivia section.</p>
+    <section id="quiz" class="card">
+      <h2>🧠 Stranger Things Trivia Quiz</h2>
+      <form id="quiz-form">
+        <div class="quiz-question">
+          <p>1. What is Eleven’s favorite food?</p>
+          <label><input type="radio" name="q1" value="a" /> Pizza</label><br>
+          <label><input type="radio" name="q1" value="b" /> Eggo waffles</label><br>
+          <label><input type="radio" name="q1" value="c" /> Pancakes</label>
+        </div>
+        <div class="quiz-question">
+          <p>2. What’s the name of the arcade in Hawkins?</p>
+          <label><input type="radio" name="q2" value="a" /> Starcade</label><br>
+          <label><input type="radio" name="q2" value="b" /> Palace Arcade</label><br>
+          <label><input type="radio" name="q2" value="c" /> Hawkins Arcade</label>
+        </div>
+        <div class="quiz-question">
+          <p>3. Who is the leader of the Hellfire Club?</p>
+          <label><input type="radio" name="q3" value="a" /> Mike Wheeler</label><br>
+          <label><input type="radio" name="q3" value="b" /> Eddie Munson</label><br>
+          <label><input type="radio" name="q3" value="c" /> Lucas Sinclair</label>
+        </div>
+        <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        <p id="quiz-result"></p>
+      </form>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Fandom Central. All rights reserved.</p>
+    <p>&copy; 2025 Stranger Things Fandom Central. All rights reserved.</p>
   </footer>
 
   <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('light-mode');
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
