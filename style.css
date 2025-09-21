@@ -1,1 +1,88 @@
+/* Base styles */
+:root {
+  --bg-color: #1e1e2f;
+  --text-color: #f0f0f0;
+  --card-bg: #2e2e44;
+  --nav-bg: #3a3a5c;
+  --header-bg: #292942;
+  --accent-color: #00bcd4;
+}
 
+body.light-mode {
+  --bg-color: #f4f4f4;
+  --text-color: #1e1e2f;
+  --card-bg: #ffffff;
+  --nav-bg: #e0e0e0;
+  --header-bg: #dcdcdc;
+  --accent-color: #007acc;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--header-bg);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav {
+  background-color: var(--nav-bg);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+nav a {
+  color: var(--text-color);
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+footer {
+  background-color: var(--header-bg);
+  text-align: center;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+/* Toggle button */
+.toggle-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
