@@ -20,3 +20,16 @@ function submitQuiz() {
   const result = document.getElementById('quiz-result');
   result.textContent = `You scored ${score} out of 3!`;
 }
+
+document.getElementById('art-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('artist-name').value;
+  const link = document.getElementById('art-link').value;
+  const desc = document.getElementById('description').value;
+
+  const response = document.getElementById('art-response');
+  response.textContent = `Thanks, ${name}! Your art submission has been received.`;
+
+  console.log(`Art submitted by ${name}: ${link} — ${desc}`);
+  this.reset();
+});
